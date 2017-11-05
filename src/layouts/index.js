@@ -19,7 +19,9 @@ typography.injectStyles()
 import Headroom from 'react-headroom';
 
 const Header = () => (
-  <Headroom>
+  <Headroom style={{
+    background: 'grey'
+  }}>
     <h1>
       <Link
         to="/"

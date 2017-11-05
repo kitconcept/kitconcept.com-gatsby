@@ -62,7 +62,9 @@ Replace existing header with react-headroom:
   import Headroom from 'react-headroom';
 
   const Header = () => (
-    <Headroom>
+    <Headroom style={{
+      background: 'grey',
+    }}>
       <h1>
         <Link
           to="/"
