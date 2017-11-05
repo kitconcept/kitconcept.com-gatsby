@@ -1,4 +1,4 @@
-# gatsby-starter-default
+# Getting started with GatsbyJS (by kitconcept)
 
 Install Gatsby:
 
