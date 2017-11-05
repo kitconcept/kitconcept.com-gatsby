@@ -47,3 +47,33 @@ Add typography theme to Gatsby site (src/layouts/index.js):
     // JS web apps.
     typography.injectStyles()
 ```
+
+## Headroom
+
+Add react-headroom to the dependencies:
+
+```
+  $ yarn add react-headroom
+```
+
+Replace existing header with react-headroom:
+
+```
+  import Headroom from 'react-headroom';
+
+  const Header = () => (
+    <Headroom>
+      <h1>
+        <Link
+          to="/"
+          style={{
+            color: 'blue',
+            textDecoration: 'none',
+          }}
+        >
+          Gatsby
+        </Link>
+      </h1>
+    </Headroom>
+  )
+```
