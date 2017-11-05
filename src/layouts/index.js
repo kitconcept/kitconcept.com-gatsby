@@ -17,6 +17,7 @@ typography.toString()
 typography.injectStyles()
 
 import Headroom from 'react-headroom';
+import logo from './logo.svg';
 
 const Header = () => (
   <Headroom style={{
@@ -30,7 +31,7 @@ const Header = () => (
           textDecoration: 'none',
         }}
       >
-        Gatsby
+        <img src={logo} alt="Logo" />
       </Link>
     </h1>
   </Headroom>

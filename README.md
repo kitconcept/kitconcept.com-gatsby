@@ -79,3 +79,37 @@ Replace existing header with react-headroom:
     </Headroom>
   )
 ```
+
+## Static Images
+
+Download a SVG image:
+
+```
+  $ cd src/layouts
+  $ wget https://kitconcept.com/logo.svg --no-check-certificate
+```
+
+Import that image and replace the string 'Gatsby' in the header with the image:
+
+```
+  import logo from './logo.svg';
+
+  const Header = () => (
+    <Headroom style={{
+      background: 'grey'
+    }}>
+      <h1>
+        <Link
+          to="/"
+          style={{
+            color: 'blue',
+            textDecoration: 'none',
+          }}
+        >
+          <img src={logo} alt="Logo" />
+        </Link>
+      </h1>
+    </Headroom>
+  )
+```
+
