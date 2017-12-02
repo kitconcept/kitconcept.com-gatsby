@@ -8,6 +8,7 @@
     "gatsby-link": "^1.6.24",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "react-headroom": "^2.2.2",
+    "react-helmet": "^5.2.0",
     "typography": "^0.16.6",
     "typography-theme-moraga": "^0.15.10"
   },

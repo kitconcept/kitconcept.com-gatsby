@@ -3,11 +3,18 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+// import './index.css'
 import Typography from 'typography'
 import moragaTheme from 'typography-theme-moraga'
 
-const typography = new Typography(moragaTheme)
+// const typography = new Typography(moragaTheme)
+
+const typography = new Typography({
+  baseFontSize: '18px',
+  baseLineHeight: 1.666,
+  headerFontFamily: ['Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+})
 
 // Output CSS as string.
 typography.toString()
@@ -28,6 +35,7 @@ const Header = () => (
     paddingLeft: '20px',
     paddingRight: '20px',
     borderBottom: '1px solid #f2f2f2',
+    fontFamily: 'Gotham SSm A, Gotham SSm B'
   }}>
     <div style={{
       margin: '0px auto',
@@ -46,26 +54,30 @@ const Header = () => (
           alt="kitconcept"
           style={{
             height: '45px',
-            marginTop: '10px'
+            marginTop: '10px',
+            marginBottom: '10px'
           }}
         />
         <span style={{
           borderRight: '1px solid rgba(0,0,0,.15)',
-          height: '28px',
+          height: '30px',
           display: 'inline-block',
           verticalAlign: 'top',
           paddingLeft: '15px',
-          marginTop: '20px'
+          marginTop: '20px',
+          marginBottom: '20px'
         }}></span>
-        <span style={{
+        <h1 style={{
           display: 'inline-block',
           color: 'black',
           verticalAlign: 'top',
           marginTop: '20px',
           marginLeft: '15px',
           fontSize: '1.5em',
-          fontWeight: '100',
-        }}>kitconcept blog</span>
+          fontWeight: '200',
+          fontStyle: 'normal',
+          lineHeight: '30px'
+        }}>kitconcept blog</h1>
       </Link>
     </div>
   </Headroom>
@@ -74,19 +86,26 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="kitconcept blog"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+      ]}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: "https://cloud.typography.com/7268374/726048/css/fonts.css",
+          media: "bogus"
+        }
       ]}
     />
     <Header />
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 740,
         padding: '100px 1.0875rem 1.45rem',
-        paddingTop: 0,
+        paddingTop: '3em',
       }}
     >
       {children()}

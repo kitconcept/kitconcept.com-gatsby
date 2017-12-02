@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `kitconcept blog`,
   },
   plugins: [`gatsby-plugin-react-helmet`],
 }
