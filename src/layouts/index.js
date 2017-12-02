@@ -18,6 +18,20 @@ class Template extends React.Component {
 
     return (
       <div>
+        <Helmet
+          title="kitconcept blog"
+          meta={[
+            { name: 'description', content: 'kitconcept company blog' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+          link={[
+            {
+              rel: 'stylesheet',
+              href: "https://cloud.typography.com/7268374/726048/css/fonts.css",
+              media: "bogus"
+            }
+          ]}
+        />
         <Headroom style={{
           background: 'white',
           height: '65px',
