@@ -18,22 +18,56 @@ typography.injectStyles()
 
 import Headroom from 'react-headroom';
 import logo from './logo.svg';
+import icon from './icon.svg';
+
 
 const Header = () => (
   <Headroom style={{
-    background: 'grey'
+    background: 'white',
+    height: '65px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    borderBottom: '1px solid #f2f2f2',
   }}>
-    <h1>
+    <div style={{
+      margin: '0px auto',
+      maxWidth: '960px',
+      padding: '0px 1.0875rem 1.45rem'
+    }}>
       <Link
         to="/"
         style={{
-          color: 'blue',
+          color: 'white',
           textDecoration: 'none',
         }}
       >
-        <img src={logo} alt="Logo" />
+        <img
+          src={icon}
+          alt="kitconcept"
+          style={{
+            height: '45px',
+            marginTop: '10px'
+          }}
+        />
+        <span style={{
+          borderRight: '1px solid rgba(0,0,0,.15)',
+          height: '28px',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingLeft: '15px',
+          marginTop: '20px'
+        }}></span>
+        <span style={{
+          display: 'inline-block',
+          color: 'black',
+          verticalAlign: 'top',
+          marginTop: '20px',
+          marginLeft: '15px',
+          fontSize: '1.5em',
+          fontWeight: '100',
+        }}>kitconcept blog</span>
       </Link>
-    </h1>
+    </div>
   </Headroom>
 )
 
@@ -51,7 +85,7 @@ const TemplateWrapper = ({ children }) => (
       style={{
         margin: '0 auto',
         maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
+        padding: '100px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
     >
