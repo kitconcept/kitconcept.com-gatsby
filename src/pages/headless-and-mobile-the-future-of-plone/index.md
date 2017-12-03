@@ -1,6 +1,6 @@
 ---
 title: Headless and Mobile - The Future of Plone
-date: "2015-05-06T23:46:37.121Z"
+date: "2017-04-25T09:52:00.121Z"
 ---
 
 Summary of two presentations by Victor Fernandez de Alba, Albert Casado and Timo Stollenwerk during PLOG 2017
@@ -11,25 +11,21 @@ This is the summary of two presentations that we (Victor Fernandez de Alba, Albe
 
 plone.restapi was started at Plone Open Garden in Sorrento three years ago. We did our first Angular 1 project on top of Plone in 2013 and we felt the need for a standardized out-of-the-box solution to expose and manage Plone content through a RESTful API.
 
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/eWDTCxW7jrTjw1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/tisto/the-beauty-and-the-beast-modern-javascript-development-with-angularjs-and-plone" title="The Beauty and the Beast - Modern Javascript Development with AngularJS and Plone" target="_blank">The Beauty and the Beast - Modern Javascript Development with AngularJS and Plone</a> </strong> from <strong><a href="https://www.slideshare.net/tisto" target="_blank">Timo Stollenwerk</a></strong> </div>
 
+[The Beauty and the Beast - Modern Javascript Development with AngularJS and Plone from Timo Stollenwerk](https://www.slideshare.net/tisto/the-beauty-and-the-beast-modern-javascript-development-with-angularjs-and-plone)
 
-The Beauty and the Beast - Modern Javascript Development with AngularJS and Plone from Timo Stollenwerk
-
-The first alpha release of plone.restapi was published in July 2016. 4teamwork provided support for Archetypes and helped to refactor the serializers/deserializers. Since then plone.restapi has been used in production by 4teamwork, CodeSyntax, kitconcept, VNC, and others.
+The [first alpha release](https://pypi.python.org/pypi/plone.restapi/1.0a1) of plone.restapi was published in July 2016. 4teamwork provided support for Archetypes and helped to refactor the serializers/deserializers. Since then plone.restapi has been used in production by 4teamwork, CodeSyntax, kitconcept, VNC, and others.
 
 # Current status of plone.restapi
 
-The core functionality of plone.restapi is a content API to manage Plone content that can be serialized Dexterity and Archetypes-based content from and into JSON. The content API allows manipulating content together with workflow states, access permissions, and local roles.
+The core functionality of plone.restapi is a [content API](http://plonerestapi.readthedocs.io/en/latest/content.html) to manage Plone content that can be serialized Dexterity and Archetypes-based content from and into JSON. The content API allows manipulating content together with workflow states, access permissions, and local roles.
 
-plone.restapi provides service endpoints for registry entries, vocabularies, and search. A types endpoint returns JSON schema to auto-generating forms. A users and groups endpoint allows managing users and groups. Users can authenticate with basic authentication as well as with a token-based authentication (JWT).
+plone.restapi provides service endpoints for registry entries, vocabularies, and search. A types endpoint returns JSON schema to auto-generating forms. A users and groups endpoint allows managing users and groups. Users can authenticate with [basic authentication](http://plonerestapi.readthedocs.io/en/latest/authentication.html#authentication) as well as with a [token-based authentication (JWT)](http://plonerestapi.readthedocs.io/en/latest/authentication.html#json-web-tokens-jwt).
 
 # Beethoven Sprint in Bonn
 
-In March 2017 fifteen Plone developers from eight different countries gathered in Bonn, Germany at the kitconcept office to finish the missing features and solve the last blockers for to road to a final plone.restapi release. At the end of the sprint we were able to release plone.restapi 1.0a10 which included more features than any release before. This release introduces a sharing, vocabularies, copy/move, and principals endpoints. We finished the API design for components and expansion, which were the main blockers because they require some minor breaking API changes.
-
-
-
-
+In March 2017 fifteen Plone developers from eight different countries [gathered in Bonn, Germany at the kitconcept office](https://kitconcept.com/plone-beethoven-sprint-bonn-2017/) to finish the missing features and solve the last blockers for to road to a final plone.restapi release. At the end of the sprint we were able to release [plone.restapi 1.0a10](https://pypi.python.org/pypi/plone.restapi/#a10-2017-03-22) which included more features than any release before. This release introduces a sharing, vocabularies, copy/move, and principals endpoints. We finished the API design for components and expansion, which were the main blockers because they require some minor breaking API changes.
 
 # Roadmap to plone.restapi 1.0
 
@@ -59,11 +55,11 @@ The idea of plone.restapi was to create an abstraction layer around the main fea
 
 It was always part of our plan to allow to implement different backend solutions at some point. Due to the hard work and visionary of Ramon, with the help of Nathan and Asko, we have this option available sooner than any of us would have imagined. This leaves us in a very comfortable position. If you start a new Plone project today you have three very good options. All of them embody the main treats and the unique Plone essence that we all know and love. You can:
 
-- Use plone.restapi today with Plone 4.x or Plone 5.x with both Archetypes and Dexterity. This allows you to build state-of-the-art front-end solutions on top of existing projects for basically any Plone project (Plone 4 was released in 2010). This is the recommended option if you work on a traditional content-centric Website or Portal that requires fast first-time-page-rendering and requires to be found on Google (SEO).
+*  Use plone.restapi today with Plone 4.x or Plone 5.x with both Archetypes and Dexterity. This allows you to build state-of-the-art front-end solutions on top of existing projects for basically any Plone project (Plone 4 was released in 2010). This is the recommended option if you work on a traditional content-centric Website or Portal that requires fast first-time-page-rendering and requires to be found on Google (SEO).
 
-- Use plone.restapi with Plone 4.x or Plone 5.x with a custom modern JavaScript front-end build entirely on Angular2 or React. Using modern JS frameworks allows you to largely re-use existing libraries, which reduces the amount of work that is necessary to build a custom web application. This is the preferred solution for any intranet like application with a highly customized UI, that requires logged-in users.
+*  Use plone.restapi with Plone 4.x or Plone 5.x with a custom modern JavaScript front-end build entirely on Angular2 or React. Using modern JS frameworks allows you to largely re-use existing libraries, which reduces the amount of work that is necessary to build a custom web application. This is the preferred solution for any intranet like application with a highly customized UI, that requires logged-in users.
 
-- Use Guillotina with its plone.restapi compliant API with a custom front-end. This is the preferred solution if you do not require all the functionality of standard Plone but rather look for a highly scalable solution with and modern backend.
+*  Use Guillotina with its plone.restapi compliant API with a custom front-end. This is the preferred solution if you do not require all the functionality of standard Plone but rather look for a highly scalable solution with and modern backend.
 
 # The Challenges
 
@@ -113,13 +109,13 @@ Mobile is overtaking desktop on web browsing in the recent years. Content Manage
 
 Albert Casado, who is responsible for the Barceloneta theme, re-imagined Plone as a mobile first Content Management System with the Pastanaga UI:
 
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/lB2W3Y46pJAgmR" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
-
-Invisioning UX and UI from kitconcept GmbH
+[Invisioning UX and UI](https://www.slideshare.net/kitconcept/invisioning-ux-and-ui) from [kitconcept GmbH](https://www.slideshare.net/kitconcept)
 
 The Pastanaga UI is the result of studying how to improve the user experience and user interactions in Plone. It is still work in progress and Albert plans to continue to work on this during the next months.
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C4W135j5d1E" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 The results will be included in a new User Experience style guide for Plone. This guide will provide core and add-on developers with a guide to maintain consistency and coherence through all the content management system UI.
 

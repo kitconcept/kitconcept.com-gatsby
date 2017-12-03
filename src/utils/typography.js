@@ -5,6 +5,11 @@ const typography = new Typography({
   baseLineHeight: 1.666,
   headerFontFamily: ['Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
   bodyFontFamily: ['Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    twitterwidget: {
+      margin: '3em auto'
+    }
+  })
 })
 
 // Output CSS as string.

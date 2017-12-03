@@ -112,3 +112,31 @@ Import that image and replace the string 'Gatsby' in the header with the image:
     </Headroom>
   )
 ```
+
+## Images
+
+Install gatsby-remark-images:
+
+```
+  $ npm install --save gatsby-remark-images
+```
+
+Add image to blog post folder (e.g. 'my-image.png'), then include that image in the markdown file with:
+
+```
+  ![](my-image.png)
+```
+
+## Twitter
+
+Install gastby-plugin-twitter:
+
+```
+  $ npm install --save gatsby-plugin-twitter
+```
+
+Add gatsby-plugin-twitter to plugins in your 'gatsby-config.js':
+
+```
+  plugins: [`gatsby-plugin-twitter`]
+```
